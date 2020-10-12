@@ -1,0 +1,14 @@
+# This is a basic workflow to help you get started with Actions
+
+name: test
+on:
+  release:
+    types: [created]
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo ${{GITHUB_REF}}
