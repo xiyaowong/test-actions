@@ -1,9 +1,8 @@
 # This is a basic workflow to help you get started with Actions
 
 name: test
-on:
-  release:
-    types: [created]
+on: 
+  watch: [started]
 
 jobs:
   deploy:
@@ -12,4 +11,4 @@ jobs:
 
     steps:
       - name: echo
-        run: echo ${{GITHUB_REF}}
+        run: ip addr show
